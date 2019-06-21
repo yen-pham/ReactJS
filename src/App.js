@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
+function One(props) {
+  return(
+    <div className="col-6" >
+      <div className="card">
+        <img src={props.linkanh} alt=" aggd"/>
+        <div className="card-body">
+          <h4 className="card-title">{props.tieude}</h4>
+          <p className="card-text"></p>
+        </div>
+      </div>
+    </div>
+  )
+
+}
+
+class App extends Component {
+  render(){
+    return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -19,8 +35,19 @@ function App() {
           Learn React
         </a>
       </header>
+      <div className="container">
+        <div className="row">
+           <One linkanh="https://img.thuthuatphanmem.vn/uploads/2018/09/24/anh-doremon-yeu_054126296.jpg" tieude=" anh doremon"/>
+           <One  linkanh="https://data.whicdn.com/images/269231315/large.jpg" tieude=" anh doremon 2"/>
+        </div>
+      </div>
+     
     </div>
   );
+  }
+  
 }
+
+
 
 export default App;
