@@ -2,6 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+function One(){
+  return (
+  <div>
+    <h1>day la cach 1</h1>
+    <h3>day la cach 1</h3>
+    </div>
+  ) 
+}
 function App() {
   return (
     <div className="App">
@@ -18,6 +26,7 @@ function App() {
         >
           Learn React
         </a>
+        <One/>
       </header>
     </div>
   );
