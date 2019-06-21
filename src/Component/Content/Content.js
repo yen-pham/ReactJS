@@ -10,6 +10,9 @@ class Content extends Component {
     thongbao2 = () =>{
         alert('thong bao so 2');
      }
+     thongbao3 = (x) =>{
+        alert(x);
+     }
     render() {
         return (
             <div className="col-log-4">
@@ -26,7 +29,9 @@ class Content extends Component {
                     <div className="row">
                         <div className="btn btn-group">
                           <div className="btn btn-info" onClick={this.thongbao}>Edit</div>
-                          <div className="btn btn-warning" onClick={this.thongbao2}>Remove</div>
+                          <div className="btn btn-warning" onClick={() => this.thongbao2()}>Remove</div>
+                          <div className="btn btn-warning" onClick={() => this.thongbao3('hahaha')}>BT3</div>
+                          <div className="btn btn-warning" onClick={this.thongbao3.bind('hohoho')}>BT4</div>
                         </div>
                         
                     </div>
