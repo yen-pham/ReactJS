@@ -18,6 +18,25 @@ class App1 extends Component {
   }
 }
 
+const so = [1,2,3,4,5];
+const so1 = so.map((x) =>(x*2)+" , ");
+const so2 = so.map((x) => (
+  <li>
+    {x}
+  </li>
+))
+
+class App2 extends Component {
+  render() {
+    return (
+      <div>
+        {so2}
+      </div>
+    );
+  }
+}
+
+
 function App() {
   return (
     <div className="App">
@@ -36,7 +55,7 @@ function App() {
           Learn React
           
         </a>
-        <App1/>
+        <App2/>
       </header>
     </div>
   );
