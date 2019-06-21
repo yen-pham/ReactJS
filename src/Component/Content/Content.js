@@ -30,8 +30,10 @@ class Content extends Component {
         return(
             <div className="row">
             <div className="form-group">
-                <input type="text" name id className="form-control" placeholder aria-describedby="helpId" />
-                 <div className="btn btn-block btn-danger" onClick={() => this.saveclick()}>Save</div>
+                <input defaultValue ={this.props.tieude} type="text" name id className="form-control" placeholder aria-describedby="helpId" />
+            </div>
+            <div className="form-group">
+            <div className="btn btn-block btn-danger" onClick={() => this.saveclick()}>Save</div>
             </div>
         </div>
         )
@@ -40,18 +42,18 @@ class Content extends Component {
 
      displayCheck  = () => {
         if(this.state.trangThai === 0 ){
-                    return this.renderButton();
-                }else {
                     return this.renderForm();
+        }else {
+                    return this.renderButton();
                 }
      }
          
      editclick  = () => {
-         this.setState({trangThai :1});
+         this.setState({trangThai :0});
      }
 
      saveclick  = () => {
-        this.setState({trangThai :0});
+        this.setState({trangThai :1});
     }
 
     render() {
