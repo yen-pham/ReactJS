@@ -8,8 +8,27 @@ function One(){
     <h1>day la cach 1</h1>
     <h3>day la cach 1</h3>
     </div>
-  ) 
+  ) ;
 }
+
+var Two = function(){
+  return (
+    <div>
+      <h1>day la cach 2</h1>
+      <h2>day la cach 2</h2>
+      </div>
+  );
+}
+
+var Three = () => (
+      <div>
+        <h1>day la cach 3</h1>
+        <h2>day la cach 3</h2>
+      </div>
+      );
+    
+
+
 function App() {
   return (
     <div className="App">
@@ -27,7 +46,10 @@ function App() {
           Learn React
         </a>
         <One/>
+        
       </header>
+      <Two></Two>
+      <Three/>
     </div>
   );
 }
