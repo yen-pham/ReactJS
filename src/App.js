@@ -1,6 +1,7 @@
-import React from 'react';
+// import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react';
 
 function One(){
   return (
@@ -27,6 +28,16 @@ var Three = () => (
       </div>
       );
     
+class Four extends Component {
+  render() {
+    return (
+      <div>
+         <button>React js component so 4</button>
+      </div>
+    );
+  }
+}
+
 
 
 function App() {
@@ -50,6 +61,7 @@ function App() {
       </header>
       <Two></Two>
       <Three/>
+      <Four/>
     </div>
   );
 }
