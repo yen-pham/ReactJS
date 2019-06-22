@@ -11,20 +11,40 @@ class App extends Component {
   }
  
  componentWillMount() {
-   console.log('componentWillMount chayj roi');
+   console.log('componentWillMount chay roi');
  }
  componentDidMount() {
    console.log('component DidMount da chay roi');
  }
+ shouldComponentUpdate(nextProps, nextState) {
+  console.log('shouldComponentUpdate chay roi');
+  return true;
+ }
+ componentWillUpdate(nextProps, nextState) {
+  console.log('componentWillUpdate chay roi');
+ }
+
+ componentDidUpdate(prevProps, prevState) {
+  console.log('componentDidUpdate chay roi');
+ }
  
+//  shouldComponentUpdate(next){}
+//  componentWillUpdate(){}
+//  componentDidUpdate(){}
  
+ updateState =() => {
+this.setState({
+  trangthai :" trang thai duoc update"
+});
+}
   
   render() {
     console.log('day la ham render da chay');
+    console.log(this.state.trangthai);
     return (
      
       <div className ="App">
-        
+        <button className="btn btn-primary" onClick={()=>{this.updateState()}}>Click to update state</button>     
       </div>
     );
   }
