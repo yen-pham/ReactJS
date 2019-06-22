@@ -1,12 +1,14 @@
 import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Noidung from './Noidung';
 
 class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      trangthai : "khoitao"
+      trangthai : "khoitao",
+      trangThai2 :"khoi tao 2"
     }
   }
  
@@ -42,9 +44,10 @@ this.setState({
     console.log('day la ham render da chay');
     console.log(this.state.trangthai);
     return (
-     
+    
       <div className ="App">
-        <button className="btn btn-primary" onClick={()=>{this.updateState()}}>Click to update state</button>     
+         <Noidung ten={this.state.trangThai2}/>
+        <button className="btn btn-primary" onClick={() => {this.updateState()}}>Click to update state</button>     
       </div>
     );
   }
