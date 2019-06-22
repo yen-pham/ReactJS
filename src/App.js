@@ -19,7 +19,7 @@ class App extends Component {
    console.log('component DidMount da chay roi');
  }
  shouldComponentUpdate(nextProps, nextState) {
-  console.log('shouldComponentUpdate chay roi');
+  console.log('shouldComponentUpdate chay roi ');
   return true;
  }
  componentWillUpdate(nextProps, nextState) {
@@ -30,19 +30,15 @@ class App extends Component {
   console.log('componentDidUpdate chay roi');
  }
  
-//  shouldComponentUpdate(next){}
-//  componentWillUpdate(){}
-//  componentDidUpdate(){}
- 
  updateState =() => {
 this.setState({
-  trangthai :" trang thai duoc update"
+  trangthai :" cap nhap 1",
+  trangThai2 :"cap nhap 2"
 });
 }
   
   render() {
-    console.log('day la ham render da chay');
-    console.log(this.state.trangthai);
+    console.log('render cua NoiDung.js');
     return (
     
       <div className ="App">
