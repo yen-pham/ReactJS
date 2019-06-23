@@ -22,9 +22,9 @@ class News extends Component {
       <div className="col-4">
         <div className="card-deck">
           <div className="card">
-            <a href="detail.html"><img src="http://placehold.it/800x400" alt className="img-fluid" /></a>
+            <a href="/news-detail"><img src="http://placehold.it/800x400" alt className="img-fluid" /></a>
             <div className="card-body">
-              <a href="detail.html"><h4 className="card-title">Tin tuc so 1</h4></a> 
+              <a href="/news-detail"><h4 className="card-title">Tin tuc so 1</h4></a> 
               <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus totam tempora sint magni aspernatur? Exercitationem harum corrupti cupiditate commodi omnis blanditiis, rerum, sint possimus animi, at tenetur numquam! Perspiciatis, eos.</p>
             </div>
           </div>
@@ -33,7 +33,7 @@ class News extends Component {
       <div className="col-4">
         <div className="card-deck">
           <div className="card">
-            <a href="detail.html"><img src="http://placehold.it/800x400" alt className="img-fluid" /></a>
+            <a href="/news-detail"><img src="http://placehold.it/800x400" alt className="img-fluid" /></a>
             <div className="card-body">
               <a href="/news-detail"><h4 className="card-title">Tin tuc so 1</h4></a> 
               <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus totam tempora sint magni aspernatur? Exercitationem harum corrupti cupiditate commodi omnis blanditiis, rerum, sint possimus animi, at tenetur numquam! Perspiciatis, eos.</p>
@@ -44,9 +44,9 @@ class News extends Component {
       <div className="col-4">
         <div className="card-deck">
           <div className="card">
-            <a href="detail.html"><img src="http://placehold.it/800x400" alt className="img-fluid" /></a>
+            <a href="/news-detail"><img src="http://placehold.it/800x400" alt className="img-fluid" /></a>
             <div className="card-body">
-              <a href="detail.html"><h4 className="card-title">Tin tuc so 1</h4></a> 
+              <a href="/news-detail"><h4 className="card-title">Tin tuc so 1</h4></a> 
               <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus totam tempora sint magni aspernatur? Exercitationem harum corrupti cupiditate commodi omnis blanditiis, rerum, sint possimus animi, at tenetur numquam! Perspiciatis, eos.</p>
             </div>
           </div>
@@ -55,9 +55,9 @@ class News extends Component {
       <div className="col-4">
         <div className="card-deck">
           <div className="card">
-            <a href="detail.html"><img src="http://placehold.it/800x400" alt className="img-fluid" /></a>
+            <a href="/news-detail"><img src="http://placehold.it/800x400" alt className="img-fluid" /></a>
             <div className="card-body">
-              <a href="detail.html"><h4 className="card-title">Tin tuc so 1</h4></a> 
+              <a href="/news-detail"><h4 className="card-title">Tin tuc so 1</h4></a> 
               <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus totam tempora sint magni aspernatur? Exercitationem harum corrupti cupiditate commodi omnis blanditiis, rerum, sint possimus animi, at tenetur numquam! Perspiciatis, eos.</p>
             </div>
           </div>
