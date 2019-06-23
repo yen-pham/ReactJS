@@ -10,12 +10,11 @@ class Redirect extends Component {
         return (
            
                  <div>
-                    <Route path="/" exact component={Home} />
+                    <Route path="/home" exact component={Home} />
                     <Route path="/news/" component={News} />
                     <Route path="/news-detail/" component={NewsDetail} />
                     <Route path="/contact/" component={Contact} />
                  </div>
-            
            
         );
     }
