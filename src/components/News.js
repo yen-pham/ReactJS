@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NewsItem from './NewsItem';
 
 class News extends Component {
     render() {
@@ -19,50 +20,15 @@ class News extends Component {
   {/* begin new */}
   <div className="container">
     <div className="row mt-3 ">
-      <div className="col-4">
-        <div className="card-deck">
-          <div className="card">
-            <a href="/news-detail"><img src="http://placehold.it/800x400" alt className="img-fluid" /></a>
-            <div className="card-body">
-              <a href="/news-detail"><h4 className="card-title">Tin tuc so 1</h4></a> 
-              <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus totam tempora sint magni aspernatur? Exercitationem harum corrupti cupiditate commodi omnis blanditiis, rerum, sint possimus animi, at tenetur numquam! Perspiciatis, eos.</p>
-            </div>
-          </div>
-        </div> <hr />
-      </div>
-      <div className="col-4">
-        <div className="card-deck">
-          <div className="card">
-            <a href="/news-detail"><img src="http://placehold.it/800x400" alt className="img-fluid" /></a>
-            <div className="card-body">
-              <a href="/news-detail"><h4 className="card-title">Tin tuc so 1</h4></a> 
-              <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus totam tempora sint magni aspernatur? Exercitationem harum corrupti cupiditate commodi omnis blanditiis, rerum, sint possimus animi, at tenetur numquam! Perspiciatis, eos.</p>
-            </div>
-          </div>
-        </div><hr />
-      </div>
-      <div className="col-4">
-        <div className="card-deck">
-          <div className="card">
-            <a href="/news-detail"><img src="http://placehold.it/800x400" alt className="img-fluid" /></a>
-            <div className="card-body">
-              <a href="/news-detail"><h4 className="card-title">Tin tuc so 1</h4></a> 
-              <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus totam tempora sint magni aspernatur? Exercitationem harum corrupti cupiditate commodi omnis blanditiis, rerum, sint possimus animi, at tenetur numquam! Perspiciatis, eos.</p>
-            </div>
-          </div>
-        </div><hr />
-      </div>
-      <div className="col-4">
-        <div className="card-deck">
-          <div className="card">
-            <a href="/news-detail"><img src="http://placehold.it/800x400" alt className="img-fluid" /></a>
-            <div className="card-body">
-              <a href="/news-detail"><h4 className="card-title">Tin tuc so 1</h4></a> 
-              <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus totam tempora sint magni aspernatur? Exercitationem harum corrupti cupiditate commodi omnis blanditiis, rerum, sint possimus animi, at tenetur numquam! Perspiciatis, eos.</p>
-            </div>
-          </div>
-        </div><hr />
-      </div>
+     
+      <NewsItem anh  ="https://cdn.24h.com.vn/upload/2-2018/images/2018-05-11/Ghe-Nha-Trang-he-nay-kham-pha-4-1526028011-478-width960height724.jpg"
+      tieuDe="Ghé Nha Trang hè này khám phá  bãi tắm đôi duy nhất ở Việt Nam" trichDan ="Trải nghiệm tắm ở bãi biển đôi nước xanh trong, ghé hang yến xem loài chim làm tổ và leo núi Du Hạ...khiến du khách mê mẩn khi đến Nha Trang hè này."/>
+      <NewsItem anh  ="https://cdn.24h.com.vn/upload/2-2018/images/2018-05-11/Ghe-Nha-Trang-he-nay-kham-pha-4-1526028011-478-width960height724.jpg"
+      tieuDe="Ghé Nha Trang hè này khám phá  bãi tắm đôi duy nhất ở Việt Nam" trichDan ="Trải nghiệm tắm ở bãi biển đôi nước xanh trong, ghé hang yến xem loài chim làm tổ và leo núi Du Hạ...khiến du khách mê mẩn khi đến Nha Trang hè này."/>
+      <NewsItem anh  ="https://cdn.24h.com.vn/upload/2-2018/images/2018-05-11/Ghe-Nha-Trang-he-nay-kham-pha-4-1526028011-478-width960height724.jpg"
+      tieuDe="Ghé Nha Trang hè này khám phá  bãi tắm đôi duy nhất ở Việt Nam" trichDan ="Trải nghiệm tắm ở bãi biển đôi nước xanh trong, ghé hang yến xem loài chim làm tổ và leo núi Du Hạ...khiến du khách mê mẩn khi đến Nha Trang hè này."/>
+      <NewsItem anh  ="https://cdn.24h.com.vn/upload/2-2018/images/2018-05-11/Ghe-Nha-Trang-he-nay-kham-pha-4-1526028011-478-width960height724.jpg"
+      tieuDe="Ghé Nha Trang hè này khám phá  bãi tắm đôi duy nhất ở Việt Nam" trichDan ="Trải nghiệm tắm ở bãi biển đôi nước xanh trong, ghé hang yến xem loài chim làm tổ và leo núi Du Hạ...khiến du khách mê mẩn khi đến Nha Trang hè này."/>
     </div>
   </div>
 </div>
