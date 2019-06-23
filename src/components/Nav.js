@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router , Route, Link } from "react-router-dom";
 
 class Nav extends Component {
     render() {
@@ -12,14 +13,17 @@ class Nav extends Component {
               </button>
               <div className="collapse navbar-collapse" id="navbarResponsive">
                 <ul className="navbar-nav ml-auto">
-                  <li className="nav-item">
-                    <a className="nav-link js-scroll-trigger" href="news.html">News</a>
+                <li className="nav-item">
+                    <Link  to="/" className="nav-link js-scroll-trigger">Home</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link js-scroll-trigger" href="detail.html">Detail</a>
+                    <Link  to="/news" className="nav-link js-scroll-trigger">News</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link js-scroll-trigger" href="contact.html">Contact</a>
+                    <Link className="nav-link js-scroll-trigger" to="/news-detail">Detail</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link js-scroll-trigger" to="/contact">Contact</Link>
                   </li>
                 </ul>
               </div>
