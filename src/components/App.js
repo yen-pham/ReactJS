@@ -3,13 +3,17 @@ import './../css/App.css';
 import Nav from './Nav';
 import Home from './Home';
 import Footer from './Footer';
+import News from './News';
+import NewsDetail from './NewsDetail';
 
 
 function App() {
   return (
-    <div className="App">
+    <div>
     <Nav/>
-    <Home/>
+    {/* <Home/> */}
+    {/* <News/> */}
+    <NewsDetail/>
     <Footer/>
     </div>
   );
