@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import data from './Data.json';
+import NewsRelated from './NewsRelated.js';
 
 class NewsDetail extends Component {
     render() {
-        console.log(this.props);
-        
+        var dem =1;
 
         return (
             <div>
@@ -26,7 +26,7 @@ class NewsDetail extends Component {
                    data.map((value,key) =>{
                     if(value.id==this.props.match.params.id)
                      return(
-                        <div className="jumbotron jumbotron-fluid">
+                        <div className="jumbotron jumbotron-fluid" key="key">
                         <div className="container newsDetaiimg">
                         <img src={value.anh} className="img-fluid " alt="news" />
                         <h1 className="display-3">{value.tieuDe}</h1>
@@ -44,34 +44,23 @@ class NewsDetail extends Component {
                     <div className="row">
                     <div className="col-12">
                         <div className="card-deck">
-                        <div className="card">
-                            <a href="/news-detail"><img src="http://placehold.it/500x300" alt="news" className="img-fluid" /></a>
-                            <div className="card-body">
-                            <a href="/news-detail"><h4 className="card-title">Tin tuc so 1</h4></a> 
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus totam tempora sint magni aspernatur? Exercitationem harum corrupti cupiditate commodi omnis blanditiis, rerum, sint possimus animi, at tenetur numquam! Perspiciatis, eos.</p>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <a href="/news-detail"><img src="http://placehold.it/500x300" alt="news" className="img-fluid" /></a>
-                            <div className="card-body">
-                            <a href="/news-detail"><h4 className="card-title">Tin tuc so 1</h4></a> 
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus totam tempora sint magni aspernatur? Exercitationem harum corrupti cupiditate commodi omnis blanditiis, rerum, sint possimus animi, at tenetur numquam! Perspiciatis, eos.</p>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <a href="/news-detail"><img src="http://placehold.it/500x300" alt="news" className="img-fluid" /></a>
-                            <div className="card-body">
-                            <a href="/news-detail"><h4 className="card-title">Tin tuc so 1</h4></a> 
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus totam tempora sint magni aspernatur? Exercitationem harum corrupti cupiditate commodi omnis blanditiis, rerum, sint possimus animi, at tenetur numquam! Perspiciatis, eos.</p>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <a href="/news-detail"><img src="http://placehold.it/500x300" alt="news" className="img-fluid" /></a>
-                            <div className="card-body">
-                            <a href="/news-detail"><h4 className="card-title">Tin tuc so 1</h4></a> 
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus totam tempora sint magni aspernatur? Exercitationem harum corrupti cupiditate commodi omnis blanditiis, rerum, sint possimus animi, at tenetur numquam! Perspiciatis, eos.</p>
-                            </div>
-                        </div>
+                            {
+                                data.map((value,key) => {
+                                    if(value.id != this.props.match.params.id){
+                                        if(dem<=4){
+                                            dem++;
+                                            return(
+                                            <NewsRelated  key={key} anh  ={value.anh}
+                                            tinId={value.id}
+                                                tieuDe={value.tieuDe} trichDan ={value.trichDan}/>)
+                                      
+                                         }
+                                    }
+                                }
+                                   
+                                    )
+                            }
+                       
                         </div>
                     </div>
                     </div>
