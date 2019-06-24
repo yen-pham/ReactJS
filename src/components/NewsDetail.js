@@ -19,7 +19,7 @@ class NewsDetail extends Component {
                 {/* begin new */}
                 <div className="jumbotron jumbotron-fluid">
                     <div className="container">
-                    <img src="http://placehold.it/1900x800" className="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt />
+                    <img src="http://placehold.it/1900x800" className="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="news" />
                     <h1 className="display-3">Fluid jumbo heading</h1>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed commodi nobis ex mollitia quidem quaerat! Vitae inventore officia autem, iure corporis ipsa suscipit assumenda, eos laudantium saepe velit ad aut?
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aut perferendis est rerum! Modi vitae provident optio, officiis veniam architecto impedit. Dolorem at cupiditate molestiae nulla veritatis aliquid? Ad, perspiciatis?
@@ -34,28 +34,28 @@ class NewsDetail extends Component {
                     <div className="col-12">
                         <div className="card-deck">
                         <div className="card">
-                            <a href="/news-detail"><img src="http://placehold.it/500x300" alt className="img-fluid" /></a>
+                            <a href="/news-detail"><img src="http://placehold.it/500x300" alt="news" className="img-fluid" /></a>
                             <div className="card-body">
                             <a href="/news-detail"><h4 className="card-title">Tin tuc so 1</h4></a> 
                             <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus totam tempora sint magni aspernatur? Exercitationem harum corrupti cupiditate commodi omnis blanditiis, rerum, sint possimus animi, at tenetur numquam! Perspiciatis, eos.</p>
                             </div>
                         </div>
                         <div className="card">
-                            <a href="/news-detail"><img src="http://placehold.it/500x300" alt className="img-fluid" /></a>
+                            <a href="/news-detail"><img src="http://placehold.it/500x300" alt="news" className="img-fluid" /></a>
                             <div className="card-body">
                             <a href="/news-detail"><h4 className="card-title">Tin tuc so 1</h4></a> 
                             <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus totam tempora sint magni aspernatur? Exercitationem harum corrupti cupiditate commodi omnis blanditiis, rerum, sint possimus animi, at tenetur numquam! Perspiciatis, eos.</p>
                             </div>
                         </div>
                         <div className="card">
-                            <a href="/news-detail"><img src="http://placehold.it/500x300" alt className="img-fluid" /></a>
+                            <a href="/news-detail"><img src="http://placehold.it/500x300" alt="news" className="img-fluid" /></a>
                             <div className="card-body">
                             <a href="/news-detail"><h4 className="card-title">Tin tuc so 1</h4></a> 
                             <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus totam tempora sint magni aspernatur? Exercitationem harum corrupti cupiditate commodi omnis blanditiis, rerum, sint possimus animi, at tenetur numquam! Perspiciatis, eos.</p>
                             </div>
                         </div>
                         <div className="card">
-                            <a href="/news-detail"><img src="http://placehold.it/500x300" alt className="img-fluid" /></a>
+                            <a href="/news-detail"><img src="http://placehold.it/500x300" alt="news" className="img-fluid" /></a>
                             <div className="card-body">
                             <a href="/news-detail"><h4 className="card-title">Tin tuc so 1</h4></a> 
                             <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus totam tempora sint magni aspernatur? Exercitationem harum corrupti cupiditate commodi omnis blanditiis, rerum, sint possimus animi, at tenetur numquam! Perspiciatis, eos.</p>
