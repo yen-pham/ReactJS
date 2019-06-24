@@ -24,6 +24,13 @@ class Contact extends Component {
         [ten]: giatri
       });
     }
+    isFileChange = (event) => {
+      const tenAnh = event.target.files[0].name;
+      this.setState({
+        fAnh : tenAnh
+      });
+
+    }
     getGiaTri = () =>{
       var noiDung ="";
       noiDung += "Ten nhan duoc la : "+ this.state.fName;
@@ -31,6 +38,7 @@ class Contact extends Component {
       noiDung += " / Phone nhan duoc la : "+ this.state.fPhone;
       noiDung += " / Message nhan duoc la : "+ this.state.fMess;
       noiDung += " / Ngay nhan duoc la : "+ this.state.fNgay;
+      noiDung += " / Anh nhan duoc la : "+ this.state.fAnh;
       return noiDung;
     }
     render() {
@@ -110,6 +118,14 @@ class Contact extends Component {
                     <option value ="thu7">Ngày thứ 7</option>
                     <option value ="chunhat">Chủ nhật</option>
                   </select>
+                
+              </div>
+            </div>
+            <div className="control-group">
+              <div className="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Chon File</label>
+                  <input type="file" className="form-control-file" name="fAnh" onChange ={(event) => this.isFileChange(event)}/>
+              
                 
               </div>
             </div>
