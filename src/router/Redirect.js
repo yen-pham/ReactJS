@@ -12,7 +12,7 @@ class Redirect extends Component {
                  <div>
                     <Route path="/home" exact component={Home} />
                     <Route path="/news/" component={News} />
-                    <Route path="/news-detail/" component={NewsDetail} />
+                    <Route path="/news-detail/:slug.:id.html" component={NewsDetail} />
                     <Route path="/contact/" component={Contact} />
                  </div>
            

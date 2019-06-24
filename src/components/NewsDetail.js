@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class NewsDetail extends Component {
     render() {
+        console.log(this.props);
         return (
             <div>
                 

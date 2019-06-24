@@ -32,16 +32,17 @@ class NewsItem extends Component {
 }
 
     render() {
+        
         return (
             <div className="col-4">
                 <div className="card-deck">
                     <div className="card">
-                        <a href={"/news-detail/"+this.to_slug(this.props.tieuDe)+"-"+this.props.tinId+".html"}><img src={this.props.anh} alt="" className="img-fluid" /></a>
+                        <a href={"/news-detail/"+this.to_slug(this.props.tieuDe)+"."+this.props.tinId+".html"}><img src={this.props.anh} alt="" className="img-fluid" /></a>
                         <div className="card-body">
-                            <a href="/news-detail"><h4 className="card-title">{this.props.tieuDe}</h4></a> 
+                            <a href={"/news-detail/"+this.to_slug(this.props.tieuDe)+"."+this.props.tinId+".html"}><h4 className="card-title">{this.props.tieuDe}</h4></a> 
                             <p className="card-text"> {this.props.trichDan}</p>
                         </div>
-                    </div>
+                    </div> 
                 </div> <hr />
             </div>
         );
