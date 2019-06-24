@@ -15,10 +15,28 @@ class Contact extends Component {
               {isRedirect : true}
             );
         } 
+
+    isChange = (event) =>{
+      const ten = event.target.name;
+      const giatri = event.target.value;
+      this.setState({
+        [ten]: giatri
+      });
+    }
+    getGiaTri = () =>{
+      var noiDung ="";
+      noiDung += "Ten nhan duoc la : "+ this.state.fName;
+      noiDung += " / Email nhan duoc la : "+ this.state.fEmail;
+      noiDung += " / Phone nhan duoc la : "+ this.state.fPhone;
+      noiDung += " / Message nhan duoc la : "+ this.state.fMess;
+      return noiDung;
+    }
     render() {
       if(this.state.isRedirect)
-      {
+      { 
+        console.log(this.getGiaTri());
         return <Redirect to = "/" />;
+       
       }
         return (
             <div>
@@ -55,28 +73,28 @@ class Contact extends Component {
             <div className="control-group">
               <div className="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Name</label>
-                <input className="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." />
+                <input name ="fName" onChange ={(event) => this.isChange(event)} className="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." />
                 <p className="help-block text-danger" />
               </div>
             </div>
             <div className="control-group">
               <div className="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Email Address</label>
-                <input className="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." />
+                <input name ="fEmail"  onChange ={(event) => this.isChange(event)} className="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." />
                 <p className="help-block text-danger" />
               </div>
             </div>
             <div className="control-group">
               <div className="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Phone Number</label>
-                <input className="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
+                <input name ="fPhone" onChange ={(event) => this.isChange(event)} className="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
                 <p className="help-block text-danger" />
               </div>
             </div>
             <div className="control-group">
               <div className="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Message</label>
-                <textarea className="form-control" id="message" rows={5} placeholder="Message" required="required" data-validation-required-message="Please enter a message." defaultValue={""} />
+                <textarea name ="fMess" onChange ={(event) => this.isChange(event)} className="form-control" id="message" rows={5} placeholder="Message" required="required" data-validation-required-message="Please enter a message." defaultValue={""} />
                 <p className="help-block text-danger" />
               </div>
             </div>
