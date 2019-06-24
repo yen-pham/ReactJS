@@ -26,6 +26,7 @@ class News extends Component {
        data.map((value,key) => {
           return(
               <NewsItem  key={key} anh  ={value.anh}
+              tinId={value.id}
                   tieuDe={value.tieuDe} trichDan ={value.trichDan}/>)
             
        })
