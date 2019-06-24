@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import data from './Data.json';
 
 class NewsDetail extends Component {
     render() {
         console.log(this.props);
+        
+
         return (
             <div>
                 
@@ -18,17 +21,24 @@ class NewsDetail extends Component {
                     </div>
                 </header>
                 {/* begin new */}
-                <div className="jumbotron jumbotron-fluid">
-                    <div className="container">
-                    <img src="http://placehold.it/1900x800" className="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="news" />
-                    <h1 className="display-3">Fluid jumbo heading</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed commodi nobis ex mollitia quidem quaerat! Vitae inventore officia autem, iure corporis ipsa suscipit assumenda, eos laudantium saepe velit ad aut?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aut perferendis est rerum! Modi vitae provident optio, officiis veniam architecto impedit. Dolorem at cupiditate molestiae nulla veritatis aliquid? Ad, perspiciatis?
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, officia exercitationem quasi tempore quae nihil ipsa necessitatibus placeat soluta voluptatem? Autem placeat cupiditate amet nostrum dolor, quod voluptate sit temporibus!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident asperiores id laboriosam vel expedita inventore, fugit porro. Beatae amet similique nisi tempore aliquid ipsa a, harum explicabo ea ad nemo?
-                    </p>
+               
+               {
+                   data.map((value,key) =>{
+                    if(value.id==this.props.match.params.id)
+                     return(
+                        <div className="jumbotron jumbotron-fluid">
+                        <div className="container newsDetaiimg">
+                        <img src={value.anh} className="img-fluid " alt="news" />
+                        <h1 className="display-3">{value.tieuDe}</h1>
+                        <p>   {value.noiDung}             
+                         </p>
+                        </div>
                     </div>
-                </div>
+                    )
+                    
+                   
+                })
+               }
                 <div className="container">
                     <h4 className="card-title text-center">Related news</h4>
                     <div className="row">

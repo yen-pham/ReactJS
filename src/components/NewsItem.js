@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router , Route, Link } from "react-router-dom";
 
 class NewsItem extends Component {
 
@@ -37,9 +38,9 @@ class NewsItem extends Component {
             <div className="col-4">
                 <div className="card-deck">
                     <div className="card">
-                        <a href={"/news-detail/"+this.to_slug(this.props.tieuDe)+"."+this.props.tinId+".html"}><img src={this.props.anh} alt="" className="img-fluid" /></a>
+                        <Link to={"/news-detail/"+this.to_slug(this.props.tieuDe)+"."+this.props.tinId+".html"}><img src={this.props.anh} alt="" className="img-fluid" /></Link>
                         <div className="card-body">
-                            <a href={"/news-detail/"+this.to_slug(this.props.tieuDe)+"."+this.props.tinId+".html"}><h4 className="card-title">{this.props.tieuDe}</h4></a> 
+                            <Link href={"/news-detail/"+this.to_slug(this.props.tieuDe)+"."+this.props.tinId+".html"}><h4 className="card-title">{this.props.tieuDe}</h4></Link> 
                             <p className="card-text"> {this.props.trichDan}</p>
                         </div>
                     </div> 
