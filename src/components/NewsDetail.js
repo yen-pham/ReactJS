@@ -24,8 +24,9 @@ class NewsDetail extends Component {
                
                {
                    data.map((value,key) =>{
-                    if(value.id==this.props.match.params.id)
-                     return(
+                    if(value.id===parseInt(this.props.match.params.id,20))
+                    {
+                         return(
                         <div className="jumbotron jumbotron-fluid" key="key">
                         <div className="container newsDetaiimg">
                         <img src={value.anh} className="img-fluid " alt="news" />
@@ -35,6 +36,9 @@ class NewsDetail extends Component {
                         </div>
                     </div>
                     )
+                    }
+                    else {return 0 ;} 
+                    
                     
                    
                 })
@@ -46,7 +50,7 @@ class NewsDetail extends Component {
                         <div className="card-deck">
                             {
                                 data.map((value,key) => {
-                                    if(value.id != this.props.match.params.id){
+                                    if(value.id !== parseInt(this.props.match.params.id,20)){
                                         if(dem<=4){
                                             dem++;
                                             return(
@@ -55,7 +59,9 @@ class NewsDetail extends Component {
                                                 tieuDe={value.tieuDe} trichDan ={value.trichDan}/>)
                                       
                                          }
+                                         
                                     }
+                                    return true;
                                 }
                                    
                                     )
