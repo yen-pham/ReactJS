@@ -1,0 +1,32 @@
+[
+    {
+        "id" :1,
+        "name":"ney",
+        "tel" : "01293736442",
+        "Permission" :1
+    },
+    {
+        "id" :2,
+        "name":"yenpham",
+        "tel" : "01293736442",
+        "Permission" :3
+    },
+    {
+        "id" :3,
+        "name":"pebusw",
+        "tel" : "01293736442",
+        "Permission" :1
+    },
+    {
+        "id" :4,
+        "name":"niguts",
+        "tel" : "01293736442",
+        "Permission" :2
+    },
+    {
+        "id" :5,
+        "name":"ihenhy",
+        "tel" : "01293736442",
+        "Permission" :1
+    }
+]
