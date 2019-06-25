@@ -10,6 +10,11 @@ class Search extends Component {
                         <input type="text" className="form-control" placeholder="Nhập từ khóa" style={{width: '610px'}} />
                         <div className="btn btn-info"> Tìm </div>
                     </div>
+                    <div>
+                        <div className="btn btn-block btn-outline-info"  onClick={()=> this.props.ketNoi()}>Thêm mới</div>
+                        <div className="btn btn-outline-secondary btn-block" >Đóng lại</div>
+                    </div>
+                    
                 </div>
                 <hr/>
             </div>
