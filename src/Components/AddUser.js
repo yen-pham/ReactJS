@@ -7,6 +7,7 @@ class AddUser extends Component {
         
         if(this.props.hienThiForm===true){
             return(
+                <div className="col-12">
                 <div className="card mb-3 mt-2 ">
                 <div className="card-header">Thêm mới</div>
                 <div className="card-body">
@@ -34,17 +35,17 @@ class AddUser extends Component {
                     </div>
                 </div>
                 </div>
+                </div>
             )
         }
     }
     render() {
         return (
-            <div className="col-3">
+           
                 <div>
                     {/* {this.hienThiNut()} */}
                     {this.hienThiForm()}
-                            </div>
-                            </div>
+                 </div>
 
         );
     }
