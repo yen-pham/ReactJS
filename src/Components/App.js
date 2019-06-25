@@ -27,6 +27,16 @@ class App extends Component {
       hienThiForm : !this.state.hienThiForm
     });
   }
+
+  getNewUSerData  = (name,tel,Permission) => {
+      console.log("ket noi ok ok!");
+      var item ={};
+      item.id ="";
+      item.name = name;
+      item.tel = tel;
+      item.Permission = Permission;
+      console.log(item);
+  }
   
   render() {
     var ketQua = [];
@@ -41,7 +51,7 @@ class App extends Component {
             <div className="row">
               <Search  checkConnectProps ={(dl)=>this.getTextSearch(dl)} ketNoi = {() => this.doiTrangThai()} hienThiForm = {this.state.hienThiForm} />
               <TableData dataUserProps ={ketQua} />
-              <AddUser hienThiForm = {this.state.hienThiForm}/>
+              <AddUser data ={ (name,tel,Permission) => this.getNewUSerData(name,tel,Permission)} hienThiForm = {this.state.hienThiForm}/>
             </div>
       </div>
     </div>

@@ -39,7 +39,7 @@ class AddUser extends Component {
                     </select>
                     </div>
                     <div className="form-group">
-                    <div className="btn btn-block btn-primary">
+                    <div className="btn btn-block btn-primary" onClick={(name,tel,Permission) =>this.props.data(this.state.name,this.state.tel,this.state.Permission)}>
                         Thêm mới
                     </div>
                     </div>
@@ -55,12 +55,12 @@ class AddUser extends Component {
         this.setState(
             {[name] : value}
         );
-        var item =[];
-        item.id = this.state.id;
-        item.name = this.state.name;
-        item.tel = this.state.tel;
-        item.Permission = this.state.Permission;
-        console.log(item);
+        // var item =[];
+        // item.id = this.state.id;
+        // item.name = this.state.name;
+        // item.tel = this.state.tel;
+        // item.Permission = this.state.Permission;
+        // console.log(item);
     }
     render() {
         // console.log(this.state);
