@@ -7,7 +7,6 @@ class TableDataRow extends Component {
         else return "Mormal User"
     }
     render() {
-        console.log(this.props.permission);
         return (
             <tr>
                 <td>{this.props.stt +1}</td>
