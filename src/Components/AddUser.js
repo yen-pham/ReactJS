@@ -1,11 +1,27 @@
 import React, { Component } from 'react';
 
 class AddUser extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            trangThai : true
+        }
+    }
+    
+    hienThiNut = () =>{
+        if(this.state.trangThai=== true){
+            return (<div className="btn btn-block btn-outline-info" >Thêm mới</div>)
+        }
+        else return (<div className="btn btn-outline-secondary btn-block" >Đóng lại</div>)
+    }
+    
+    
     render() {
         return (
             <div className="col-3">
                 <div>
-                    <div className="card mb-3 ">
+                    {this.hienThiNut()}
+                    <div className="card mb-3 mt-2 ">
                     <div className="card-header">Thêm mới</div>
                     <div className="card-body">
                         <div className="form-group">
