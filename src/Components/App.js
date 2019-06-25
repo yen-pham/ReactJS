@@ -35,7 +35,12 @@ class App extends Component {
       item.name = name;
       item.tel = tel;
       item.Permission = Permission;
-      console.log(item);
+      var items = this.state.data;
+      items.push(item);
+      this.setState({
+        data:items
+      });
+      console.log(this.state.data);
   }
   
   render() {
