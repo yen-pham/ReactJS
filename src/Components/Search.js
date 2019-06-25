@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class Search extends Component {
+
     render() {
         return (
             
@@ -12,7 +13,7 @@ class Search extends Component {
                     </div>
                     <div>
                         <div className="btn btn-block btn-outline-info"  onClick={()=> this.props.ketNoi()}>Thêm mới</div>
-                        <div className="btn btn-outline-secondary btn-block" >Đóng lại</div>
+                        <div className="btn btn-outline-secondary btn-block" onClick={()=> this.props.ketNoi()} >Đóng lại</div>
                     </div>
                     
                 </div>
