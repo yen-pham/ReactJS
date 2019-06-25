@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 
 
+
 class AddUser extends Component {
     hienThiForm=()=>{   
         if(this.props.hienThiForm===true){
@@ -12,15 +13,15 @@ class AddUser extends Component {
                 <div className="card-body">
                     <div className="form-group">
                     
-                    <input type="text" className="form-control"  placeholder="Tên user" />
+                    <input type="text" name="name" className="form-control" onChange ={ (event) => this.isChange(event)} placeholder="Tên user" />
                     </div>
                     <div className="form-group">
                     
-                    <input type="text" className="form-control"  placeholder="Điện thoại" />
+                    <input type="text" name="tel"  className="form-control" onChange ={ (event) => this.isChange(event)} placeholder="Điện thoại" />
                     </div>
                     <hr/>
                     <div className="form-group">
-                    <select className="custom-select" required>
+                    <select className="custom-select" required name="name" onChange ={ (event) => this.isChange(event)} name="Permission" >
                         <option value>Chọn quyền mặc định</option>
                         <option value={1}>Admin</option>
                         <option value={2}>Modrator</option>
@@ -37,6 +38,12 @@ class AddUser extends Component {
                 </div>
             )
         }
+    }
+    isChange  = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        console.log(name);
+        console.log(value);
     }
     render() {
         return (

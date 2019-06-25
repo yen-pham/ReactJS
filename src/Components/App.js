@@ -34,7 +34,6 @@ class App extends Component {
       if(item.name.indexOf(this.state.searchText)!= -1)ketQua.push(item);
       
     });
-    console.log(ketQua);
     return (
       <div>
       <Header/>
