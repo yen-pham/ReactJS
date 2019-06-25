@@ -4,6 +4,16 @@ import React, { Component } from 'react';
 
 
 class AddUser extends Component {
+    constructor(props) {
+        super(props);
+        this.state ={
+            id : "",
+            name:"",
+            tel:"",
+            Permission : ""
+        }
+    }
+    
     hienThiForm=()=>{   
         if(this.props.hienThiForm===true){
             return(
@@ -42,10 +52,18 @@ class AddUser extends Component {
     isChange  = (event) => {
         const name = event.target.name;
         const value = event.target.value;
-        console.log(name);
-        console.log(value);
+        this.setState(
+            {[name] : value}
+        );
+        var item =[];
+        item.id = this.state.id;
+        item.name = this.state.name;
+        item.tel = this.state.tel;
+        item.Permission = this.state.Permission;
+        console.log(item);
     }
     render() {
+        // console.log(this.state);
         return (
            
                 <div>
