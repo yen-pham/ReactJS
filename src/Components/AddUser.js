@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 
 
 class AddUser extends Component {
-    hienThiForm=()=>{
-        
+    hienThiForm=()=>{   
         if(this.props.hienThiForm===true){
             return(
                 <div className="col-12">
