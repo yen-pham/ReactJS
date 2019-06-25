@@ -4,19 +4,19 @@ class AddUser extends Component {
     render() {
         return (
             <div className="col-3">
-                <div className>
+                <div>
                     <div className="card mb-3 ">
                     <div className="card-header">Thêm mới</div>
                     <div className="card-body">
                         <div className="form-group">
-                        <label htmlFor />
-                        <input type="text" className="form-control" name id aria-describedby="helpId" placeholder="Tên user" />
+                        
+                        <input type="text" className="form-control"  placeholder="Tên user" />
                         </div>
                         <div className="form-group">
-                        <label htmlFor />
-                        <input type="text" className="form-control" name id aria-describedby="helpId" placeholder="Điện thoại" />
+                        
+                        <input type="text" className="form-control"  placeholder="Điện thoại" />
                         </div>
-                        <hr />
+                        <hr/>
                         <div className="form-group">
                         <select className="custom-select" required>
                             <option value>Chọn quyền mặc định</option>

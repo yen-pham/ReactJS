@@ -9,8 +9,8 @@ function App() {
   return (
     <div>
       <Header/>
-      <div class="container">
-            <div class="row">
+      <div className="container">
+            <div className="row">
               <Search/>
               <TableData/>
               <AddUser/>
