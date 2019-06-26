@@ -11,15 +11,15 @@ class EditUser extends Component {
                             <div className="card-body">
                                 <div className="form-group">
                                 
-                                <input type="text" name="name" className="form-control"  placeholder="Tên user" />
+                                <input type="text" name="name" className="form-control"  placeholder="Tên user" defaultValue={this.props.userEditObject.name} />
                                 </div>
                                 <div className="form-group">
                                 
-                                <input type="text" name="tel"  className="form-control" placeholder="Điện thoại" />
+                                <input type="text" name="tel"  className="form-control" placeholder="Điện thoại" defaultValue={this.props.userEditObject.tel}/>
                                 </div>
                                 <hr/>
                                 <div className="form-group">
-                                <select className="custom-select" required name="name" name="Permission" >
+                                <select className="custom-select" required name="name" name="Permission" defaultValue={this.props.userEditObject.Permission} >
                                     <option value>Chọn quyền mặc định</option>
                                     <option value={1}>Admin</option>
                                     <option value={2}>Modrator</option>

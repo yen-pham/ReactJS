@@ -15,7 +15,8 @@ class App extends Component {
       hienThiForm : false,
       data : DataUser,
       searchText : '',
-      editUserStatus :false
+      editUserStatus :false,
+      userEditObject : {}
     }
   }
   getTextSearch = (dl) => {
@@ -49,6 +50,9 @@ class App extends Component {
   editUser  = (user) => {
     console.log("da ket noi thanh cong voi edit ");
     console.log(user);
+    this.setState({
+      userEditObject :user
+    });
   }
 
   changeEditUserStatus  = () => {
@@ -72,7 +76,9 @@ class App extends Component {
                       checkConnectProps ={(dl)=>this.getTextSearch(dl)} 
                       ketNoi = {() => this.doiTrangThai()} 
                       hienThiForm = {this.state.hienThiForm} 
-                      changeEditUserStatus ={() => this.changeEditUserStatus()} />
+                      changeEditUserStatus ={() => this.changeEditUserStatus()}
+                      userEditObject={this.state.userEditObject}
+                       />
 
               <TableData dataUserProps ={ketQua}  editFun ={(user) => this.editUser(user)} changeEditUserStatus ={() => this.changeEditUserStatus()} />
 
