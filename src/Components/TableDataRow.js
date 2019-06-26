@@ -6,6 +6,11 @@ class TableDataRow extends Component {
         else  if(this.props.permission==1)return "Moderator";
         else return "Mormal User"
     }
+
+    editClick  = () => {
+        this.props.editFunClick();
+    }
+
     render() {
         return (
             <tr>
@@ -15,10 +20,10 @@ class TableDataRow extends Component {
                 <td>{this.permissionShow()}</td>
                 <td>
                 <div className="btn btn-warning sua">
-                    <i className="fa fa-edit    "> Sửa </i>
+                    <i className="fa fa-edit" onClick={() => this.editClick()}> Sửa </i>
                 </div>
                 <div className="btn btn-danger xoa">
-                    <i className="fa fa-delete    "> Xóa </i>
+                    <i className="fa fa-delete"> Xóa </i>
                 </div>
                 </td>
             </tr>

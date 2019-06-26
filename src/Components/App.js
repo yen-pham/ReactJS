@@ -45,6 +45,10 @@ class App extends Component {
       console.log(this.state.data);
   }
   
+  editUser  = () => {
+    console.log("da ket noi thanh cong voi edit ");
+  }
+
   render() {
     var ketQua = [];
     this.state.data.forEach((item) => {
@@ -57,7 +61,7 @@ class App extends Component {
       <div className="container">
             <div className="row">
               <Search  checkConnectProps ={(dl)=>this.getTextSearch(dl)} ketNoi = {() => this.doiTrangThai()} hienThiForm = {this.state.hienThiForm} />
-              <TableData dataUserProps ={ketQua} />
+              <TableData dataUserProps ={ketQua}  editFun ={() => this.editUser()} />
               <AddUser data ={ (name,tel,Permission) => this.getNewUSerData(name,tel,Permission)} hienThiForm = {this.state.hienThiForm}/>
             </div>
       </div>
