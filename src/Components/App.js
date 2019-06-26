@@ -48,8 +48,6 @@ class App extends Component {
   }
   
   editUser  = (user) => {
-    console.log("da ket noi thanh cong voi edit ");
-    console.log(user);
     this.setState({
       userEditObject :user
     });
@@ -62,13 +60,19 @@ class App extends Component {
   }
 
   getUserEditInfoApp  = (info) => {
-   console.log("thong tin da sua xong la : " + info.name);
+   this.state.data.forEach((value,key)=>{
+     if(value.id === info.id){
+       value.name = info.name;
+       value.tel = info.tel;
+       value.Permission = info.Permission;
+     }
+   })
 }
 
   render() {
     var ketQua = [];
     this.state.data.forEach((item) => {
-      if(item.name.indexOf(this.state.searchText)!= -1)ketQua.push(item);
+      if(item.name.indexOf(this.state.searchText)!== -1)ketQua.push(item);
       
     });
     return (

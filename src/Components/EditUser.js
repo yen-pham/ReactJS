@@ -32,7 +32,6 @@ class EditUser extends Component {
     }
 
     render() {
-        console.log(this.state);
         return (
             <div className="row">
                 <div className="col-12">
@@ -50,7 +49,7 @@ class EditUser extends Component {
                                 </div>
                                 <hr/>
                                 <div className="form-group">
-                                <select onChange ={(event) => this.isChange(event)} className="custom-select" required name="name" name="Permission" defaultValue={this.props.userEditObject.Permission} >
+                                <select onChange ={(event) => this.isChange(event)} className="custom-select"  name="Permission" defaultValue={this.props.userEditObject.Permission} >
                                     <option value>Chọn quyền mặc định</option>
                                     <option value={1}>Admin</option>
                                     <option value={2}>Modrator</option>

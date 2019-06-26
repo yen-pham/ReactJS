@@ -29,7 +29,7 @@ class AddUser extends Component {
                     </div>
                     <hr/>
                     <div className="form-group">
-                    <select className="custom-select" required name="name" onChange ={ (event) => this.isChange(event)} name="Permission" >
+                    <select className="custom-select"  onChange ={ (event) => this.isChange(event)} name="Permission" >
                         <option value>Chọn quyền mặc định</option>
                         <option value={1}>Admin</option>
                         <option value={2}>Modrator</option>
