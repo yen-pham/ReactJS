@@ -44,7 +44,6 @@ class App extends Component {
       this.setState({
         data:items
       });
-      console.log(this.state.data);
   }
   
   editUser  = (user) => {
@@ -69,6 +68,10 @@ class App extends Component {
    })
 }
 
+  deleteUser  = (idUser) => {
+      console.log(idUser);
+  }
+
   render() {
     var ketQua = [];
     this.state.data.forEach((item) => {
@@ -89,9 +92,13 @@ class App extends Component {
                       getUserEditInfoApp ={(info) => this.getUserEditInfoApp(info)}
                        />
 
-              <TableData dataUserProps ={ketQua}  editFun ={(user) => this.editUser(user)} changeEditUserStatus ={() => this.changeEditUserStatus()} />
+              <TableData dataUserProps ={ketQua} 
+                         editFun ={(user) => this.editUser(user)} 
+                         changeEditUserStatus ={() => this.changeEditUserStatus()}
+                         deleteUser ={(idUser) => this.deleteUser(idUser)} />
 
-              <AddUser data ={ (name,tel,Permission) => this.getNewUSerData(name,tel,Permission)} hienThiForm = {this.state.hienThiForm}/>
+              <AddUser data ={ (name,tel,Permission) => this.getNewUSerData(name,tel,Permission)} 
+                      hienThiForm = {this.state.hienThiForm}/>
             </div>
       </div>
     </div>
