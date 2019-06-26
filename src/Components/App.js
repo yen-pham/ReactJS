@@ -14,7 +14,8 @@ class App extends Component {
     this.state ={
       hienThiForm : false,
       data : DataUser,
-      searchText : ''
+      searchText : '',
+      editUserStatus :false
     }
   }
   getTextSearch = (dl) => {
@@ -61,7 +62,7 @@ class App extends Component {
       <Header/>
       <div className="container">
             <div className="row">
-              <Search  checkConnectProps ={(dl)=>this.getTextSearch(dl)} ketNoi = {() => this.doiTrangThai()} hienThiForm = {this.state.hienThiForm} />
+              <Search editUserStatus={this.state.editUserStatus} checkConnectProps ={(dl)=>this.getTextSearch(dl)} ketNoi = {() => this.doiTrangThai()} hienThiForm = {this.state.hienThiForm} />
               <TableData dataUserProps ={ketQua}  editFun ={(user) => this.editUser(user)} />
               <AddUser data ={ (name,tel,Permission) => this.getNewUSerData(name,tel,Permission)} hienThiForm = {this.state.hienThiForm}/>
             </div>
