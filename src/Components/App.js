@@ -61,6 +61,10 @@ class App extends Component {
     });
   }
 
+  getUserEditInfoApp  = (info) => {
+   console.log("thong tin da sua xong la : " + info.name);
+}
+
   render() {
     var ketQua = [];
     this.state.data.forEach((item) => {
@@ -78,6 +82,7 @@ class App extends Component {
                       hienThiForm = {this.state.hienThiForm} 
                       changeEditUserStatus ={() => this.changeEditUserStatus()}
                       userEditObject={this.state.userEditObject}
+                      getUserEditInfoApp ={(info) => this.getUserEditInfoApp(info)}
                        />
 
               <TableData dataUserProps ={ketQua}  editFun ={(user) => this.editUser(user)} changeEditUserStatus ={() => this.changeEditUserStatus()} />

@@ -21,6 +21,16 @@ class EditUser extends Component {
         );
     }
 
+    saveButton  = () => {
+        var info = {};
+        info.id = this.state.id;
+        info.name = this.state.name;
+        info.tel = this.state.tel;
+        info.Permission = this.state.Permission;
+        this.props.getUserEditInfo(info);
+        this.props.changeEditUserStatus();
+    }
+
     render() {
         console.log(this.state);
         return (
@@ -48,7 +58,7 @@ class EditUser extends Component {
                                 </select>
                                 </div>
                                 <div className="form-group">
-                                <input type="reset" className="btn btn-block btn-primary" onClick ={() => this.props.changeEditUserStatus()} value ="Lưu">
+                                <input type="button" className="btn btn-block btn-primary" onClick ={() => this.saveButton()} value ="Lưu">
                                 </input>
                                 </div>
                             </div>
