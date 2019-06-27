@@ -11,7 +11,14 @@ var config = {
   // Initialize Firebase
 
   export const firebaseConnect = firebase.initializeApp(config);
-  var data = firebase.database().ref('dataForNote');
-  data.once('value').then(function(snapshot){
+  var data = firebase.database().ref('dataForNote/note2');
+ 
+
+  data.set({
+    id:10,
+    title : "ngày 29/6/2019",
+    content :"Hôm nay trời vẫn chưa mưa"
+  })
+   data.once('value').then(function(snapshot){
     console.log(snapshot.val());
   });
