@@ -2,8 +2,17 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {firebaseConnect} from './firebaseConnect';
+import * as firebase from 'firebase';
 
 class App extends Component {
+  pushData  = () => {
+    var connectData =firebase.database().ref('dataForNote');
+    connectData.push({
+      title :"Ghi chu so 3",
+      content : "Noi dung ghi chu so 3"
+    });
+    console.log("ban vua them du lieu vao firebase");
+  }
   render() {
     console.log(firebaseConnect);
     return (
@@ -21,6 +30,7 @@ class App extends Component {
         >
           Learn React
         </a>
+        <button onClick ={() => this.pushData()}>Click vao day de them moi bang ham push</button>
       </header>
     </div>
     );
