@@ -3,15 +3,15 @@ import {connect} from 'react-redux';
 
 
 class News extends Component {
-    userEditStatusInStore  = () => {
-        var {dispatch} =this.props;
-        dispatch({type: "CHANGE_EDIT_STATUS"});
-    }
+    // userEditStatusInStore  = () => {
+    //     var {dispatch} =this.props;
+    //     dispatch({type: "CHANGE_EDIT_STATUS"});
+    // }
     render() {
         return (
             <div>
                 <h2>Day la component News</h2>
-                <button onClick ={() => this.userEditStatusInStore()}>click</button>
+                <button onClick ={() => this.props.userEditStatusInStore()}>click</button>
             </div>
         );
     }
@@ -21,4 +21,12 @@ const mapStateToProps = (state, ownProps) => {
       editstatus: state.editstatus
     }
   }
-  export default connect(mapStateToProps)(News)
+
+  const mapDispatchToProps = (dispatch, ownProps) => {
+      return {
+        userEditStatusInStore: () => {
+              dispatch({type: "CHANGE_EDIT_STATUS"})
+          }
+      }
+  }
+  export default connect(mapStateToProps,mapDispatchToProps)(News)
