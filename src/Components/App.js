@@ -13,12 +13,26 @@ class App extends Component {
     super(props);
     this.state ={
       hienThiForm : false,
-      data : DataUser,
+      data : [],
       searchText : '',
       editUserStatus :false,
       userEditObject : {}
     }
   }
+  
+  componentWillMount() {
+    if(localStorage.getItem("userData") ===null)
+    {
+      localStorage.setItem("userData",JSON.stringify(DataUser));
+    }
+    else {
+      var temp = JSON.parse(localStorage.getItem("userData"));
+      this.setState({
+      data :temp
+       });
+        }
+  }
+  
   getTextSearch = (dl) => {
     this.setState({
       searchText :dl
@@ -44,6 +58,7 @@ class App extends Component {
       this.setState({
         data:items
       });
+      localStorage.setItem("userData",JSON.stringify(items));
   }
   
   editUser  = (user) => {
@@ -66,6 +81,7 @@ class App extends Component {
        value.Permission = info.Permission;
      }
    })
+   localStorage.setItem("userData",JSON.stringify(this.state.data));
 }
 
   deleteUser  = (idUser) => {
@@ -75,6 +91,8 @@ class App extends Component {
           data :tempData
         }
       );
+      localStorage.setItem("userData",JSON.stringify(tempData));
+
   }
 
   render() {
