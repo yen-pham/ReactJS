@@ -13,6 +13,11 @@ class App extends Component {
     });
     console.log("ban vua them du lieu vao firebase");
   }
+  deleteData  = (id) => {
+    var connectData =firebase.database().ref('dataForNote');
+    connectData.child(id).remove();
+    console.log("ban vua xoa du lieu "+id);
+  }
   render() {
     console.log(firebaseConnect);
     return (
@@ -31,6 +36,8 @@ class App extends Component {
           Learn React
         </a>
         <button onClick ={() => this.pushData()}>Click vao day de them moi bang ham push</button>
+        <hr/>
+        <button onClick ={(id) => this.deleteData("-LiPJfVoicQCItvfprLN")}>Click vao day de xoa</button>
       </header>
     </div>
     );
