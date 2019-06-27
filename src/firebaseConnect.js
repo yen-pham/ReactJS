@@ -10,9 +10,6 @@ var config = {
   };
   // Initialize Firebase
 
-  export const noteData = firebase.initializeApp(config);
-  var data = firebase.database().ref('dataForNote');
+  firebase.initializeApp(config);
+   export const noteData = firebase.database().ref('dataForNote');
 
-   data.once('value').then(function(snapshot){
-    console.log(snapshot.val());
-  });

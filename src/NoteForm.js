@@ -12,8 +12,6 @@ class NoteForm extends Component {
     isChange  = (event) => {
         const name = event.target.name;
         const value = event.target.value;
-        console.log(name);
-        console.log(value);
         this.setState({
             [name]:value
         });
@@ -21,9 +19,10 @@ class NoteForm extends Component {
 
     addData  = (title,content) => {
         var item ={};
-        item.title=title;
-        item.content=content;
-        console.log(item);
+        item.noteTitle=title;
+        item.noteContent=content;
+        this.props.getData(item);
+        alert('ban da them thanh cong');
     }
     render() {
         return (
