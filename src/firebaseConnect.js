@@ -11,3 +11,7 @@ var config = {
   // Initialize Firebase
 
   export const firebaseConnect = firebase.initializeApp(config);
+  var data = firebase.database().ref('dataForNote');
+  data.once('value').then(function(snapshot){
+    console.log(snapshot.val());
+  });
