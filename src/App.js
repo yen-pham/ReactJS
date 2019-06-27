@@ -20,7 +20,11 @@ class App extends Component {
         case "ADD_NEW":
           return{...state,num:[...state.num,action.newItem]}
           break;
+        case "DELETE":
+          return{...state,num:state.num.filter((value,i)=>i!==action.number)}
+          break;
         default:
+          return state;
           break;
       }
       return state;
@@ -31,6 +35,9 @@ class App extends Component {
     console.log(store1.getState());
     store1.dispatch({type:"ADD_NEW",
                       newItem :"Tai Nghe"});
+    console.log(store1.getState());
+    store1.dispatch({type:"DELETE",
+                      number :0});
     console.log(store1.getState());
 
     return (
