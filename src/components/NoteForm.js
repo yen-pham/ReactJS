@@ -11,7 +11,12 @@ class NoteForm extends Component {
         }
     }
 
-    
+    printTitle  = () => {
+        if(this.props.addStatus){
+            return <h4>Thêm mới</h4>
+        }
+        else return <h4>Sửa ghi chú</h4>
+    }
     componentWillMount() {
         if(this.props.editItem)
         {
@@ -57,7 +62,7 @@ class NoteForm extends Component {
     render() {
         return (
             <div className="col-4 bg-dark text-white pt-5 pb-5 w-90%" >
-                <h3>SỬA NỘI DUNG NOTE</h3>
+                {this.printTitle()}
                 <div className="form-group ">
                     <label htmlFor="notetitle">Tiêu đề Note</label>
                     <input defaultValue ={ this.props.editItem.noteTitle} onChange ={(event) => this.isChange(event)} type="text" className="form-control" name="noteTitle" id="notetitle" aria-describedby="helpIdNoteTitle" placeholder="Tiêu đề Note" />
@@ -76,7 +81,8 @@ class NoteForm extends Component {
 }
 const mapStateToProps = (state, ownProps) => {
     return {
-        editItem: state.editItem
+        editItem: state.editItem,
+        addStatus: state.isAdd
     }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {

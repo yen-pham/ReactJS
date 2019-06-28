@@ -3,7 +3,8 @@ var redux = require('redux');
 
 const noteInitialState = {
     isEdit: false,
-    editItem :{}
+    editItem :{},
+    isAdd :false
 }
 const allReducer = (state = noteInitialState, action) => {
     switch (action.type) {
@@ -13,6 +14,12 @@ const allReducer = (state = noteInitialState, action) => {
             return state
         case 'CHANGE_EDIT_STATUS':
             return {...state,isEdit : !state.isEdit}
+        case 'CHANGE_ADD_STATUS_FALSE':
+            console.log(state.isAdd);
+            return {...state,isAdd : false}
+        case 'CHANGE_ADD_STATUS_TRUE':
+            console.log(state.isAdd);
+            return {...state,isAdd : true}
         case 'GET_EDIT_DATA':
             return {...state,editItem : action.editObject}
         case 'DELETE':
@@ -32,6 +39,6 @@ const allReducer = (state = noteInitialState, action) => {
 }
 var store = redux.createStore(allReducer);
 // store.subscribe(function(){
-//     console.log(JSON.stringify(store.getState()));
+//     console.log(JSON.stringify(store.getState().isAdd));
 // })
 export default store;

@@ -5,6 +5,7 @@ class NoteItem extends Component {
   twoActionButton  = () => {
     this.props.changeEditStatus();
     this.props.getEditData(this.props.note);
+    this.props.changeAddStatus();
   }
   getDeleteData  = () => {
     this.props.deleteData(this.props.note.key);
@@ -33,7 +34,8 @@ class NoteItem extends Component {
 }
 const mapStateToProps = (state, ownProps) => {
   return {
-    isEdit: state.isEdit
+    isEdit: state.isEdit,
+    addStatus: state.isAdd
   }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
@@ -46,6 +48,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     },
     deleteData: (deleteId) => {
       dispatch({type:'DELETE',deleteId})
+    },
+    changeAddStatus: () => {
+      dispatch({type:'CHANGE_ADD_STATUS_FALSE'})
     }
   }
 }
