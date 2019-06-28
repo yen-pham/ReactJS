@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 class NoteItem extends Component {
   twoActionButton  = () => {
     this.props.changeEditStatus();
-    console.log(this.props.note);
+    this.props.getEditData(this.props.note);
   }
     render() {
         return (
@@ -37,6 +37,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     changeEditStatus: () => {
       dispatch({type:'CHANGE_EDIT_STATUS'})
+    },
+    getEditData: (editObject) => {
+      dispatch({type:'GET_EDIT_DATA',editObject})
     }
   }
 }
