@@ -24,7 +24,7 @@ class NoteForm extends Component {
         item.noteContent=content;
         // this.props.getData(item);
         // alert('ban da them thanh cong');
-        this.props.addData(JSON.stringify(item));
+        this.props.addData(item);
     }
     render() {
         return (
