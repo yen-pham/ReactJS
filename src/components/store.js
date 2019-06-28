@@ -11,7 +11,6 @@ const allReducer = (state = noteInitialState, action) => {
             noteData.push(action.getItem);
             return state
         case 'CHANGE_EDIT_STATUS':
-            console.log(state.isEdit);
             return {...state,isEdit : !state.isEdit}
         default:
             return state

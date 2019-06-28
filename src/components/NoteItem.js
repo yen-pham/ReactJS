@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
 class NoteItem extends Component {
+  twoActionButton  = () => {
+    this.props.changeEditStatus();
+    console.log(this.props.note);
+  }
     render() {
         return (
             <div className="card ">
@@ -10,7 +14,7 @@ class NoteItem extends Component {
                     <a data-toggle="collapse" data-parent="#accordianId" href={"#note"+this.props.id} aria-expanded="true" aria-controls={"note"+this.props.id}>
                       {this.props.noteTitle}
                     </a>
-                    <button className="btn btn-outline-primary float-right bg-light" onClick ={ ()=> this.props.changeEditStatus()}>Sửa</button>
+                    <button className="btn btn-outline-primary float-right bg-light" onClick ={ ()=> this.twoActionButton()}>Sửa</button>
                   <button className="btn btn-outline-danger float-right bg-light">Xóa</button>
                   </h5>
                 

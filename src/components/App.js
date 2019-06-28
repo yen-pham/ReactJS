@@ -13,7 +13,6 @@ class App extends Component {
     
   }
   render() {
-    console.log(this.props.isEdit);
     return (
       <div className="App ">
       <Nav/>
