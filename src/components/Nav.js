@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
 class Nav extends Component {
+    handleAdd  = (event) => {
+         event.preventDefault();
+    }
     render() {
         return (
             <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -12,7 +15,7 @@ class Nav extends Component {
                         <a className="nav-link text-light" href="/">Home <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item ">
-                        <a className="nav-link text-light" href="/">xem danh sách NOTE</a>
+                        <a className="nav-link text-light" href="http://google.com" onClick ={(event) => this.handleAdd(event)}>Thêm ghi chú mới</a>
                     </li>
                     </ul>
                 </div>
