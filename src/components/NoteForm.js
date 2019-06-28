@@ -35,12 +35,24 @@ class NoteForm extends Component {
     }
 
     addData  = (title,content) => {
-        var item ={};
-        item.noteTitle=title;
-        item.noteContent=content;
-        // this.props.getData(item);
-        // alert('ban da them thanh cong');
-        this.props.addData(item);
+        if(this.state.id){
+           var editObject = {};
+           editObject.id = this.state.id;
+           editObject.noteTitle = this.state.noteTitle;
+           editObject.noteContent = this.state.noteContent;
+
+           this.props.editDataStore(editObject);
+           console.log('dang sua du lieu ');
+        }
+        else {
+            var item ={};
+            item.noteTitle=title;
+            item.noteContent=content;
+            // this.props.getData(item);
+            // alert('ban da them thanh cong');
+            this.props.addData(item);
+        }
+        
     }
     render() {
         return (
@@ -71,7 +83,12 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         addData: (getItem) => {
             dispatch({type:"ADD_DATA",getItem})
+        },
+        editDataStore: (getItem) => {
+            dispatch({type:"EDIT",getItem})
         }
+               
+        
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(NoteForm);

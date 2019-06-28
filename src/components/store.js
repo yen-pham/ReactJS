@@ -15,6 +15,9 @@ const allReducer = (state = noteInitialState, action) => {
             return {...state,isEdit : !state.isEdit}
         case 'GET_EDIT_DATA':
             return {...state,editItem : action.editObject}
+        case 'EDIT':
+            console.log('Du lieu nhan duoc la :'+JSON.stringify(action.getItem));
+            return {...state,editItem : {}}
         default:
             return state
     }
