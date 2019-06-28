@@ -15,10 +15,8 @@ const allReducer = (state = noteInitialState, action) => {
         case 'CHANGE_EDIT_STATUS':
             return {...state,isEdit : !state.isEdit}
         case 'CHANGE_ADD_STATUS_FALSE':
-            console.log(state.isAdd);
             return {...state,isAdd : false}
         case 'CHANGE_ADD_STATUS_TRUE':
-            console.log(state.isAdd);
             return {...state,isAdd : true}
         case 'GET_EDIT_DATA':
             return {...state,editItem : action.editObject}
