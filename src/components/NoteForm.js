@@ -42,7 +42,6 @@ class NoteForm extends Component {
            editObject.noteContent = this.state.noteContent;
 
            this.props.editDataStore(editObject);
-           console.log('dang sua du lieu ');
         }
         else {
             var item ={};
@@ -52,6 +51,7 @@ class NoteForm extends Component {
             // alert('ban da them thanh cong');
             this.props.addData(item);
         }
+        this.props.changeEditStatus();
         
     }
     render() {
@@ -81,6 +81,9 @@ const mapStateToProps = (state, ownProps) => {
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
+        changeEditStatus: () => {
+            dispatch({type:'CHANGE_EDIT_STATUS'})
+          },
         addData: (getItem) => {
             dispatch({type:"ADD_DATA",getItem})
         },

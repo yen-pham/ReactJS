@@ -16,7 +16,11 @@ const allReducer = (state = noteInitialState, action) => {
         case 'GET_EDIT_DATA':
             return {...state,editItem : action.editObject}
         case 'EDIT':
-            console.log('Du lieu nhan duoc la :'+JSON.stringify(action.getItem));
+            noteData.child(action.getItem.id).update({
+                noteTitle : action.getItem.noteTitle,
+                noteContent : action.getItem.noteContent
+            })
+            console.log('cap nhap du lieu  :'+JSON.stringify(action.getItem)+ 'thanh cong');
             return {...state,editItem : {}}
         default:
             return state
