@@ -5,12 +5,12 @@ const noteInitialState = {
     isEdit: false,
     editItem :{},
     isAdd :false,
-    AlertShow:true
+    AlertShow:false
 }
 const allReducer = (state = noteInitialState, action) => {
     switch (action.type) {
         case 'ADD_DATA':
-            console.log('du lieu nhanh duoc la :'+ action.getItem );
+            console.log(JSON.stringify(action.getItem) );
             noteData.push(action.getItem);
             return state
         case 'CHANGE_EDIT_STATUS':
@@ -19,6 +19,10 @@ const allReducer = (state = noteInitialState, action) => {
             return {...state,isAdd : false}
         case 'CHANGE_ADD_STATUS_TRUE':
             return {...state,isAdd : true}
+        case 'ALERT_OFF':
+            return {...state,AlertShow : false}
+        case 'ALERT_ON':
+            return {...state,AlertShow : true}
         case 'GET_EDIT_DATA':
             return {...state,editItem : action.editObject}
         case 'DELETE':

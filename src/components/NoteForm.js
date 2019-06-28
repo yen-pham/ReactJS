@@ -47,6 +47,7 @@ class NoteForm extends Component {
            editObject.noteContent = this.state.noteContent;
 
            this.props.editDataStore(editObject);
+           this.props.alertOn();
         }
         else {
             var item ={};
@@ -55,6 +56,7 @@ class NoteForm extends Component {
             // this.props.getData(item);
             // alert('ban da them thanh cong');
             this.props.addData(item);
+            this.props.alertOn();
         }
         this.props.changeEditStatus();
         
@@ -95,6 +97,13 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         },
         editDataStore: (getItem) => {
             dispatch({type:"EDIT",getItem})
+        },
+       
+        alertOn: () => {
+            dispatch({type:"ALERT_ON"})
+        },
+        alertOff: () => {
+            dispatch({type:"ALERT_OFF"})
         }
                
         
