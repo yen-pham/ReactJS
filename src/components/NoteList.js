@@ -10,62 +10,45 @@ class NoteList extends Component {
     }
   }
   
+
   componentWillMount() {
     noteData.on('value',(notes)=>{
-        var arrayData =[];
+        var arrayData = [];
         notes.forEach(element => {
-        const key =element.key;
-        const noteTitle =element.val().noteTitle;
-        const noteContent =element.val().noteContent;
-        arrayData.push({
-          id :key,
-          noteTitle:noteTitle,
-          noteContent:noteContent
-        })
-        this.setState(
-          {
-            dataFirebase:arrayData
-          }
-        );
-
-      });
-    })
-  }
-
-  // componentWillMount() {
-  //   var arrayData =[]
-  //   noteData.once('value').then(function(notes){
-  //     notes.forEach(element => {
-  //       const key =element.key;
-  //       const noteTitle =element.val().noteTitle;
-  //       const noteContent =element.val().noteContent;
-  //       arrayData.push({
-  //         id :key,
-  //         noteTitle:noteTitle,
-  //         noteContent:noteContent
-  //       });
-       
-
-  //     });
-     
-  //   })
-  //   this.setState(    
-  //     {dataFirebase:arrayData}
-  // )
-  // }
-  
-  getData  = () => {
-    if(this.state.dataFirebase){
-       return this.state.dataFirebase.map((value,key)=>{
-            return (
-              <NoteItem key={key} id={key} noteTitle={value.noteTitle} noteContent={value.noteContent} />
-            )
+            arrayData.push({
+                key : element.key,
+                noteTitle : element.val().noteTitle,
+                noteContent : element.val().noteContent
             })
-    }
+            
+        });
+        this.setState({
+            dataFirebase:arrayData
+        });
+    })
+}
+
+ 
+  
+getData = () => { 
+  if(this.state.dataFirebase){
+     return this.state.dataFirebase.map((value,key)=>{
+         return (
+             <NoteItem
+              key={key}
+              i={key}
+              noteTitle={value.noteTitle}
+              noteContent={value.noteContent}
+              note={value}
+              />
+         )
+     })
+  }
+}
     
       
     
-  }
+  
     render() {
         return (
             <div className="col">

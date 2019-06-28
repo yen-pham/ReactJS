@@ -10,8 +10,10 @@ class App extends Component {
     if(this.props.isEdit){
       return <NoteForm getData ={(item) => this.addData(item)}/>
     }
+    
   }
   render() {
+    console.log(this.props.isEdit);
     return (
       <div className="App ">
       <Nav/>
@@ -21,6 +23,7 @@ class App extends Component {
            {this.showEditForm()}
          </div>
       </div>
+
     </div>
     );
   }
@@ -38,5 +41,5 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     }
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps,mapDispatchToProps)(App);
 

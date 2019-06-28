@@ -10,7 +10,8 @@ const allReducer = (state = noteInitialState, action) => {
             console.log('du lieu nhanh duoc la :'+ action.getItem );
             noteData.push(action.getItem);
             return state
-        case 'CHANGE_EDIT_STATUS)':
+        case 'CHANGE_EDIT_STATUS':
+            console.log(state.isEdit);
             return {...state,isEdit : !state.isEdit}
         default:
             return state
