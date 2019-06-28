@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 
 class NoteForm extends Component {
     constructor(props) {
@@ -18,11 +19,12 @@ class NoteForm extends Component {
     }
 
     addData  = (title,content) => {
-        var item ={};
-        item.noteTitle=title;
-        item.noteContent=content;
-        this.props.getData(item);
-        alert('ban da them thanh cong');
+        // var item ={};
+        // item.noteTitle=title;
+        // item.noteContent=content;
+        // this.props.getData(item);
+        // alert('ban da them thanh cong');
+        this.props.addData();
     }
     render() {
         return (
@@ -44,5 +46,16 @@ class NoteForm extends Component {
         );
     }
 }
-
-export default NoteForm;
+const mapStateToProps = (state, ownProps) => {
+    return {
+        testThoi: state.testThoi
+    }
+}
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        addData: () => {
+            dispatch({type:"ADD_DATA"})
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(NoteForm);
