@@ -4,7 +4,8 @@ var redux = require('redux');
 const noteInitialState = {
     isEdit: false,
     editItem :{},
-    isAdd :false
+    isAdd :false,
+    AlertShow:true
 }
 const allReducer = (state = noteInitialState, action) => {
     switch (action.type) {
