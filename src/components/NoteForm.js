@@ -32,12 +32,12 @@ class NoteForm extends Component {
                 <h3>SỬA NỘI DUNG NOTE</h3>
                 <div className="form-group ">
                     <label htmlFor="notetitle">Tiêu đề Note</label>
-                    <input onChange ={(event) => this.isChange(event)} type="text" className="form-control" name="noteTitle" id="notetitle" aria-describedby="helpIdNoteTitle" placeholder="Tiêu đề Note" />
+                    <input defaultValue ={ this.props.editItem.noteTitle} onChange ={(event) => this.isChange(event)} type="text" className="form-control" name="noteTitle" id="notetitle" aria-describedby="helpIdNoteTitle" placeholder="Tiêu đề Note" />
                     <small id="helpIdNoteTitle" className="form-text text-muted">Điền tiêu đề vào đây</small>
                 </div>
                 <div className="form-group">
                     <label htmlFor="notetitle">Nội dung Note</label>
-                    <input onChange ={(event) => this.isChange(event)} type="text" className="form-control" name="noteContent" id="notetitle" aria-describedby="helpIdNoteTitle" placeholder="Nội dung Note" />
+                    <textarea defaultValue ={ this.props.editItem.noteContent} onChange ={(event) => this.isChange(event)} type="text" className="form-control" name="noteContent" id="notetitle" aria-describedby="helpIdNoteTitle" placeholder="Nội dung Note" />
                     <small id="helpIdNoteTitle" className="form-text text-muted">Điền nội dung vào đây</small>
                 </div>
                 <button onClick ={(title,content) => this.addData(this.state.noteTitle,this.state.noteContent)} type="submit" className="btn btn-primary btn-block">Lưu</button>
@@ -48,7 +48,7 @@ class NoteForm extends Component {
 }
 const mapStateToProps = (state, ownProps) => {
     return {
-        testThoi: state.testThoi
+        editItem: state.editItem
     }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {

@@ -36,7 +36,7 @@ getData = () => {
          return (
              <NoteItem
               key={key}
-              i={key}
+              id={key}
               noteTitle={value.noteTitle}
               noteContent={value.noteContent}
               note={value}
