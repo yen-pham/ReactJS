@@ -19,12 +19,12 @@ class NoteForm extends Component {
     }
 
     addData  = (title,content) => {
-        // var item ={};
-        // item.noteTitle=title;
-        // item.noteContent=content;
+        var item ={};
+        item.noteTitle=title;
+        item.noteContent=content;
         // this.props.getData(item);
         // alert('ban da them thanh cong');
-        this.props.addData();
+        this.props.addData(JSON.stringify(item));
     }
     render() {
         return (
@@ -53,8 +53,8 @@ const mapStateToProps = (state, ownProps) => {
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        addData: () => {
-            dispatch({type:"ADD_DATA"})
+        addData: (getItem) => {
+            dispatch({type:"ADD_DATA",getItem})
         }
     }
 }

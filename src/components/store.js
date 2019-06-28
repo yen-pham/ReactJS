@@ -6,7 +6,7 @@ const noteInitialState = {
 const allReducer = (state = noteInitialState, action) => {
     switch (action.type) {
         case 'ADD_DATA':
-            console.log('Ket noi thanh cong addData');
+            console.log('du lieu nhanh duoc la :'+ action.getItem );
             return state
         default:
             return state
