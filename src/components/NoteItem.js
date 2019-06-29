@@ -9,6 +9,7 @@ class NoteItem extends Component {
   }
   getDeleteData  = () => {
     this.props.deleteData(this.props.note.key);
+    this.props.alertOn('Bạn đã xóa ghi chú "'+this.props.note.noteTitle+'" thành công','danger')
   }
     render() {
         return (
@@ -51,7 +52,10 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     },
     changeAddStatus: () => {
       dispatch({type:'CHANGE_ADD_STATUS_FALSE'})
-    }
+    },
+    alertOn: (alertContent,alertType) => {
+      dispatch({type:"ALERT_ON",alertContent,alertType})
+  },
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(NoteItem);
